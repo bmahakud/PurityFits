@@ -79,6 +79,24 @@ public :
 
    bool MHThigh();
 
+   
+   bool HTlow();
+
+   bool HTmed();
+
+   bool HThigh();
+
+
+
+   bool NJetslow();
+
+   bool NJetsmed();
+
+   bool NJetshigh();
+   
+
+
+
    bool isEB();
    bool isEE();
 
@@ -160,7 +178,7 @@ return false;
 
 bool ReadTree::MHTlow(){
 
-if(NJets >=4  && HT > 500. && MHT >200. && MHT <350 && dPhi1>0.5 && dPhi2>0.5 && dPhi3 > 0.3 && dPhi4 > 0.3){
+if(NJets >=4  && HT > 500. && MHT >200. && MHT <300 && dPhi1>0.5 && dPhi2>0.5 && dPhi3 > 0.3 && dPhi4 > 0.3){
 return true;
 }else{
 
@@ -173,7 +191,7 @@ return false;
 
 bool ReadTree::MHTmed(){
 
-if(NJets >=4  && HT > 500. && MHT >350. && MHT<500 && dPhi1>0.5 && dPhi2>0.5 && dPhi3 > 0.3 && dPhi4 > 0.3){
+if(NJets >=4  && HT > 500. && MHT >300. && MHT<500 && dPhi1>0.5 && dPhi2>0.5 && dPhi3 > 0.3 && dPhi4 > 0.3){
 return true;
 }else{
 
@@ -198,7 +216,7 @@ return false;
 
 bool ReadTree::BaseLine(){//baseline
 
-if(NJets >=4  && HT > 500. && MHT >200. && dPhi1>0.5 && dPhi2>0.5 && dPhi3 > 0.3 && dPhi4 > 0.3){
+if(NJets >=4  && HT > 500. && MHT >200.&& dPhi1>0.5 && dPhi2>0.5 && dPhi3 > 0.3 && dPhi4 > 0.3){
 return true;
 }else{
 
@@ -265,7 +283,46 @@ return false;
 
 
 
+////////////////////////
 
+bool ReadTree::HTlow(){
+
+if(NJets >=4  && HT > 500. && HT <600. && MHT >200. &&  dPhi1>0.5 && dPhi2>0.5 && dPhi3 > 0.3 && dPhi4 > 0.3){
+return true;
+}else{
+
+return false;
+}
+
+}
+
+
+
+bool ReadTree::HTmed(){
+
+if(NJets >=4  && HT > 600. && HT < 800. && MHT >200. && dPhi1>0.5 && dPhi2>0.5 && dPhi3 > 0.3 && dPhi4 > 0.3){
+return true;
+}else{
+
+return false;
+}
+
+}
+
+
+bool ReadTree::HThigh(){
+
+if(NJets >=4  && HT > 800. && MHT >200. && dPhi1>0.5 && dPhi2>0.5 && dPhi3 > 0.3 && dPhi4 > 0.3){
+return true;
+}else{
+
+return false;
+}
+
+}
+
+
+//////////////////
 
 
 
