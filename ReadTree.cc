@@ -327,8 +327,44 @@ return false;
 
 
 
+//////////////
 
 
+bool ReadTree::NJetslow(){
+
+if(NJets >=4 && NJets<=6 && HT > 500.  && MHT >200. &&  dPhi1>0.5 && dPhi2>0.5 && dPhi3 > 0.3 && dPhi4 > 0.3){
+return true;
+}else{
+
+return false;
+}
+
+}
+
+
+
+bool ReadTree::NJetsmed(){
+
+if(NJets >=6 && NJets <=8  && HT > 500.  && MHT >200. && dPhi1>0.5 && dPhi2>0.5 && dPhi3 > 0.3 && dPhi4 > 0.3){
+return true;
+}else{
+
+return false;
+}
+
+}
+
+
+bool ReadTree::NJetshigh(){
+
+if(NJets >=9  && HT > 500. && MHT >200. && dPhi1>0.5 && dPhi2>0.5 && dPhi3 > 0.3 && dPhi4 > 0.3){
+return true;
+}else{
+
+return false;
+}
+
+}
 
 
 
